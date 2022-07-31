@@ -1,0 +1,25 @@
+div.pad{
+    display: flex;
+    flex-direction: column;
+}
+
+
+div.column{
+    display: flex;
+    flex-direction: row;
+}
+
+div.key{
+    border:1px solid black;
+    width: 120.5px;
+    height: 85px;
+    font-size: 20pt;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.key:hover{
+    background-color: #D0CCCB;
+}
