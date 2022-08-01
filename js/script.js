@@ -42,10 +42,13 @@ function calc(){
     if(result_value.nodeValue !== ' '){
         switch(expression.nodeValue[0]){
             case '1': case '2': case '3': case '4': case '5': case '6': case '7': case '8': case '9': case '0':
-                other = 0;
+                result_value.nodeValue = eval(expression.nodeValue);
+                break;
+            default:
+                result_value.nodeValue = eval(`${other}${expression.nodeValue}`);
+                break;
         }
         
-        result_value.nodeValue = eval(`${other}${expression.nodeValue}`);
     }
     else{
         result_value.nodeValue = eval(expression.nodeValue);
