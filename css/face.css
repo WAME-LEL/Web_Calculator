@@ -1,0 +1,22 @@
+div.face{
+    width: 488px;
+    height:200px;
+    border: 1px solid black;
+    font-size: 60pt;
+}
+
+div.face>span{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 10px;
+    height:100px;
+    width:480px;
+    overflow: hidden;
+}
+
+div.face>span.result{
+    display: inline-block;
+    font-size: 40pt;
+    text-align: right;
+    vertical-align: bottom;
+}

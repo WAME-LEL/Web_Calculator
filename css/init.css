@@ -1,0 +1,9 @@
+div.init{
+    font-size: 20pt;
+    text-align: center;
+    border: 1px solid black;
+}
+
+div.init:hover{
+    background-color: #D0CCCB;
+}
