@@ -23,3 +23,11 @@ div.key{
 div.key:hover{
     background-color: #D0CCCB;
 }
+
+div.key.enter{
+    background-color: #A9CBED;
+}
+
+div.key.enter:hover{
+    background-color: #4193E4;
+}

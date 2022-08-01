@@ -26,18 +26,25 @@ let other = 0;
 
 function val(){
     if(expression.nodeValue.length===1 && expression.nodeValue==='0'){
-        if((this === plus || this === minus || this === division || this === multiply) && result_value.nodeValue !== ' '){
-            other = result_value.nodeValue;
-        }
         expression.nodeValue = this.firstChild.nodeValue;
     }
     else{
         expression.nodeValue += this.firstChild.nodeValue;
     }
+
+    if((this === plus || this === minus || this === division || this === multiply) && result_value.nodeValue !== ' '){
+        other = result_value.nodeValue;
+    }
+
 }
 
 function calc(){
     if(result_value.nodeValue !== ' '){
+        switch(expression.nodeValue[0]){
+            case '1': case '2': case '3': case '4': case '5': case '6': case '7': case '8': case '9': case '0':
+                other = 0;
+        }
+        
         result_value.nodeValue = eval(`${other}${expression.nodeValue}`);
     }
     else{
